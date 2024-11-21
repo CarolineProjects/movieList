@@ -124,20 +124,32 @@ body {
 .nav-link font {
   color: #FFF;
 }
+.wrapperCard a{
+  color: unset;
+}
+.wrapperCard a:hover{
+  color: unset;
+}
+.wrapperCard img {
+  border-radius: 12px;
+}
 
-.card-container {
+.wrapperCard{
   background: #2b2c3d;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
+  padding: 12px;
+  margin: 0px 30px 30px 0;
+  
 }
 
-.card-container:hover {
+.wrapperCard:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
     cursor: pointer;
   }
+
 .name {
   color: #FFF;
   padding: 8px;
@@ -145,6 +157,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 2px;
+  text-decoration: none;
+  border: 0;
+  margin: 20px 0;
+
 }
 
 .name-details{
@@ -171,7 +187,7 @@ body {
 .sinopse p{
     font-size: 20px;
     color: #767e94;
-    line-height: 24px;
+    line-height: 30px;
     margin-bottom: 30px;
 }
 .container-details label{
@@ -182,4 +198,10 @@ body {
     line-height: 32px;
     color: #c3c8d4;
     margin-bottom: 20px;
+}
+
+
+.details img{
+  border-radius: 12px;
+  margin-bottom: 50px;
 }
