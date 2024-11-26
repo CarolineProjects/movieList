@@ -1,7 +1,6 @@
 function detailsMovies(){
-
-    const url = window.location.href;  // Pega a URL completa
-    const id = url.split('?');  // Extrai o valor do parâmetro 'id'
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
 
     const urlTeste = `https://api.themoviedb.org/3/movie/${id}?language=en-US`
 
@@ -10,7 +9,7 @@ function detailsMovies(){
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNWY5NGM4ZjA0OTdlNThjZGRjNmM1OWUxNWYxOTVmNyIsIm5iZiI6MTczMjA1MzA5NS41Mjk2NjE0LCJzdWIiOiI2NzM3YzIyYjA1NDJhYzdlZjZjZjZmMmQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.S_xBDjwdqv80iFQOUHAF7yqomvA4s-6c_QV-_uPeI60'
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNWY5NGM4ZjA0OTdlNThjZGRjNmM1OWUxNWYxOTVmNyIsIm5iZiI6MTczMjY0NzEyNy44NjQ4NzE3LCJzdWIiOiI2NzM3YzIyYjA1NDJhYzdlZjZjZjZmMmQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.wczlRUhId-mxMMhl9Miwr_VUBF04F5Jw6uOAbtPDQwU'
         }
       };
       
@@ -26,9 +25,11 @@ function detailsMovies(){
             const genres = res?.genres?.map(genre => genre.name).join(", ");
 
             let info = `      
-            
-            <img src="${IMAGE_BASE_URL}${res.backdrop_path}" alt="" class="img-fluid">
-            <p class="name-details">${res.original_title}</p>
+            <div class="">
+              <img src="${IMAGE_BASE_URL}${res.backdrop_path}" alt="Capa do Filme" class="w-100">
+              <p class="name-details">${res.original_title}</p>
+            </div>
+          
 
                 <div class="row">
                 <div class="col-md-6 text-center">

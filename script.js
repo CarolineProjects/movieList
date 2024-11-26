@@ -22,14 +22,14 @@
 
        let cardContainer = document.querySelector('.card-container')
        let card = `
-        <div class="col-md-2 wrapperCard ">
-            <a href="details.html?${element.id}">
+        <li class="col-md-2 wrapperCard ">
+            <a href="details.html?id=${element.id}"">
              
                 <img src="${IMAGE_BASE_URL}${element.poster_path}" alt="Capa do Filme" class="img-fluid">
                 <p class="name">${element.original_title}</p>
              
             </a>  
-           </div>         
+           </li>         
        `
        cardContainer.innerHTML += card
       }) 

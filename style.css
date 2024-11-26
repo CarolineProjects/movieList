@@ -141,6 +141,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   padding: 12px;
   margin: 0px 30px 30px 0;
+  max-width: 280px;
   
 }
 
@@ -149,7 +150,9 @@ body {
     transition: transform 0.3s ease;
     cursor: pointer;
   }
-
+.card-container{
+  flex-wrap: wrap;  
+}
 .name {
   color: #FFF;
   padding: 8px;
@@ -166,17 +169,19 @@ body {
 .name-details{
     background: #20283E;
     color: #FFF;
-    height: 144px;
+    position: absolute;
+    bottom: 47%;
+    left: 34%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
     border-radius: 24px;
-    width: 560px;
     padding: 40px;
-    transform: translateY(-50px);
-    left: 100px;
-    position: relative;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 40px;
     letter-spacing: 2px;
+    gap: 8px;
 }
 .sinopse h2{
     font-weight: bold;
@@ -204,4 +209,7 @@ body {
 .details img{
   border-radius: 12px;
   margin-bottom: 50px;
+}
+.img-logo{
+  cursor: pointer;
 }
